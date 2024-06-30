@@ -64,7 +64,7 @@ export class DataTableHeaderCellComponent {
     return this._allRowsSelected;
   }
 
-  @Input() selectionType: SelectionType;
+  @Input() selectionType: SelectionType | keyof typeof SelectionType;
 
   @Input() set column(column: TableColumn) {
     this._column = column;
